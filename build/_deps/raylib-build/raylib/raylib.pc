@@ -1,4 +1,4 @@
-prefix=C:/Program Files (x86)/3DPlatformer
+prefix=C:/Program Files (x86)/Aim
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

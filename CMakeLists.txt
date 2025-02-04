@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(3DPlatformer LANGUAGES C)
+project(Aim LANGUAGES C)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -12,11 +12,11 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(raylib)
 
-add_executable(3DPlatformer src/main.c)
-target_link_libraries(3DPlatformer PRIVATE raylib)
+add_executable(Aim src/main.c)
+target_link_libraries(Aim PRIVATE raylib)
 
 if(WIN32)
-    target_link_libraries(3DPlatformer PRIVATE opengl32 gdi32 winmm)
+    target_link_libraries(Aim PRIVATE opengl32 gdi32 winmm)
 elseif (APPLE)
   find_library(COCOA_LIBRARY Cocoa)
   find_library(IOKIT_LIBRARY IOKit)

@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\dev\3D_Platformer
+CMAKE_SOURCE_DIR = C:\dev\Aim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\dev\3D_Platformer\build
+CMAKE_BINARY_DIR = C:\dev\Aim\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -77,7 +77,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	"C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/dev/3D_Platformer/build/CPackSourceConfig.cmake
+	"C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/dev/Aim/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -151,9 +151,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\dev\3D_Platformer\build\CMakeFiles C:\dev\3D_Platformer\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\dev\Aim\build\CMakeFiles C:\dev\Aim\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\dev\3D_Platformer\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\dev\Aim\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -181,17 +181,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named 3DPlatformer
+# Target rules for targets named Aim
 
 # Build rule for target.
-3DPlatformer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 3DPlatformer
-.PHONY : 3DPlatformer
+Aim: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Aim
+.PHONY : Aim
 
 # fast build rule for target.
-3DPlatformer/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\3DPlatformer.dir\build.make CMakeFiles/3DPlatformer.dir/build
-.PHONY : 3DPlatformer/fast
+Aim/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Aim.dir\build.make CMakeFiles/Aim.dir/build
+.PHONY : Aim/fast
 
 #=============================================================================
 # Target rules for targets named uninstall
@@ -250,7 +250,7 @@ src/main.obj: src/main.c.obj
 
 # target to build an object file
 src/main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\3DPlatformer.dir\build.make CMakeFiles/3DPlatformer.dir/src/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Aim.dir\build.make CMakeFiles/Aim.dir/src/main.c.obj
 .PHONY : src/main.c.obj
 
 src/main.i: src/main.c.i
@@ -258,7 +258,7 @@ src/main.i: src/main.c.i
 
 # target to preprocess a source file
 src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\3DPlatformer.dir\build.make CMakeFiles/3DPlatformer.dir/src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Aim.dir\build.make CMakeFiles/Aim.dir/src/main.c.i
 .PHONY : src/main.c.i
 
 src/main.s: src/main.c.s
@@ -266,7 +266,7 @@ src/main.s: src/main.c.s
 
 # target to generate assembly for a file
 src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\3DPlatformer.dir\build.make CMakeFiles/3DPlatformer.dir/src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Aim.dir\build.make CMakeFiles/Aim.dir/src/main.c.s
 .PHONY : src/main.c.s
 
 # Help Target
@@ -285,7 +285,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... uninstall
 	@echo ... update_mappings
-	@echo ... 3DPlatformer
+	@echo ... Aim
 	@echo ... glfw
 	@echo ... raylib
 	@echo ... src/main.obj

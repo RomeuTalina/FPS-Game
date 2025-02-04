@@ -1,56 +1,64 @@
 _deps/raylib-build/raylib/CMakeFiles/raylib.dir/rcore.c.obj: \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\rcore.c \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\raylib.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
- C:/msys64/ucrt64/include/stdarg.h \
- C:/msys64/ucrt64/include/_mingw_stdarg.h \
- C:/msys64/ucrt64/include/vadefs.h C:/msys64/ucrt64/include/_mingw.h \
- C:/msys64/ucrt64/include/_mingw_mac.h \
- C:/msys64/ucrt64/include/_mingw_secapi.h \
- C:/msys64/ucrt64/include/sdks/_mingw_ddk.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdbool.h \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\config.h \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\utils.h \
- C:/msys64/ucrt64/include/stdlib.h C:/msys64/ucrt64/include/corecrt.h \
- C:/msys64/ucrt64/include/corecrt_wstdlib.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
- C:/msys64/ucrt64/include/limits.h C:/msys64/ucrt64/include/crtdefs.h \
- C:/msys64/ucrt64/include/sec_api/stdlib_s.h \
- C:/msys64/ucrt64/include/malloc.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
- C:/msys64/ucrt64/include/errno.h C:/msys64/ucrt64/include/stdio.h \
- C:/msys64/ucrt64/include/corecrt_stdio_config.h \
- C:/msys64/ucrt64/include/_mingw_off_t.h \
- C:/msys64/ucrt64/include/swprintf.inl \
- C:/msys64/ucrt64/include/sec_api/stdio_s.h \
- C:/msys64/ucrt64/include/string.h \
- C:/msys64/ucrt64/include/sec_api/string_s.h \
- C:/msys64/ucrt64/include/time.h C:/msys64/ucrt64/include/sys/timeb.h \
- C:/msys64/ucrt64/include/sec_api/sys/timeb_s.h \
- C:/msys64/ucrt64/include/_timeval.h \
- C:/msys64/ucrt64/include/pthread_time.h C:/msys64/ucrt64/include/math.h \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\rlgl.h \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\external/glad.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
- C:/msys64/ucrt64/include/stdint.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
- C:/msys64/ucrt64/include/stddef.h \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\raymath.h \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\rgestures.h \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\rcamera.h \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\external/msf_gif.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mmintrin.h \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\external/sinfl.h \
- C:/msys64/ucrt64/include/assert.h \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\external/sdefl.h \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\external/rprand.h \
- C:/msys64/ucrt64/include/sys/stat.h C:/msys64/ucrt64/include/io.h \
- C:/msys64/ucrt64/include/sys/types.h \
- C:/msys64/ucrt64/include/_mingw_stat64.h \
- C:/msys64/ucrt64/include/dirent.h C:/msys64/ucrt64/include/direct.h \
- C:\dev\3D_Platformer\build\_deps\raylib-src\src\platforms/rcore_desktop.c \
- C:/dev/3D_Platformer/build/_deps/raylib-src/src/external/glfw/include/GLFW/glfw3.h \
- C:/dev/3D_Platformer/build/_deps/raylib-src/src/external/glfw/include/GLFW/glfw3native.h
+ C:\dev\Aim\build\_deps\raylib-src\src\rcore.c \
+ C:\dev\Aim\build\_deps\raylib-src\src\raylib.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdarg.h \
+ C:/mingw64/x86_64-w64-mingw32/include/stdarg.h \
+ C:/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+ C:/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ C:/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ C:/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ C:/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ C:/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdbool.h \
+ C:\dev\Aim\build\_deps\raylib-src\src\config.h \
+ C:\dev\Aim\build\_deps\raylib-src\src\utils.h \
+ C:/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+ C:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
+ C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
+ C:/mingw64/x86_64-w64-mingw32/include/limits.h \
+ C:/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ C:/mingw64/x86_64-w64-mingw32/include/malloc.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
+ C:/mingw64/x86_64-w64-mingw32/include/errno.h \
+ C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
+ C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+ C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ C:/mingw64/x86_64-w64-mingw32/include/string.h \
+ C:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:/mingw64/x86_64-w64-mingw32/include/time.h \
+ C:/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
+ C:/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+ C:/mingw64/x86_64-w64-mingw32/include/_timeval.h \
+ C:/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+ C:/mingw64/x86_64-w64-mingw32/include/math.h \
+ C:\dev\Aim\build\_deps\raylib-src\src\rlgl.h \
+ C:\dev\Aim\build\_deps\raylib-src\src\external/glad.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+ C:/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
+ C:/mingw64/x86_64-w64-mingw32/include/stddef.h \
+ C:\dev\Aim\build\_deps\raylib-src\src\raymath.h \
+ C:\dev\Aim\build\_deps\raylib-src\src\rgestures.h \
+ C:\dev\Aim\build\_deps\raylib-src\src\rcamera.h \
+ C:\dev\Aim\build\_deps\raylib-src\src\external/msf_gif.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/emmintrin.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/xmmintrin.h \
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mmintrin.h \
+ C:\dev\Aim\build\_deps\raylib-src\src\external/sinfl.h \
+ C:/mingw64/x86_64-w64-mingw32/include/assert.h \
+ C:\dev\Aim\build\_deps\raylib-src\src\external/sdefl.h \
+ C:\dev\Aim\build\_deps\raylib-src\src\external/rprand.h \
+ C:/mingw64/x86_64-w64-mingw32/include/sys/stat.h \
+ C:/mingw64/x86_64-w64-mingw32/include/io.h \
+ C:/mingw64/x86_64-w64-mingw32/include/sys/types.h \
+ C:/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+ C:/mingw64/x86_64-w64-mingw32/include/dirent.h \
+ C:/mingw64/x86_64-w64-mingw32/include/direct.h \
+ C:\dev\Aim\build\_deps\raylib-src\src\platforms/rcore_desktop.c \
+ C:/dev/Aim/build/_deps/raylib-src/src/external/glfw/include/GLFW/glfw3.h \
+ C:/dev/Aim/build/_deps/raylib-src/src/external/glfw/include/GLFW/glfw3native.h

@@ -2,37 +2,37 @@
 	"sources" : 
 	[
 		{
-			"file" : "C:/dev/3D_Platformer/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate"
+			"file" : "C:/dev/Aim/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate"
 		},
 		{
-			"file" : "C:/dev/3D_Platformer/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate.rule"
+			"file" : "C:/dev/Aim/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate.rule"
 		},
 		{
-			"file" : "C:/dev/3D_Platformer/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate-complete.rule"
+			"file" : "C:/dev/Aim/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate-complete.rule"
 		},
 		{
-			"file" : "C:/dev/3D_Platformer/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build.rule"
+			"file" : "C:/dev/Aim/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build.rule"
 		},
 		{
-			"file" : "C:/dev/3D_Platformer/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure.rule"
+			"file" : "C:/dev/Aim/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure.rule"
 		},
 		{
-			"file" : "C:/dev/3D_Platformer/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download.rule"
+			"file" : "C:/dev/Aim/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download.rule"
 		},
 		{
-			"file" : "C:/dev/3D_Platformer/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install.rule"
+			"file" : "C:/dev/Aim/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install.rule"
 		},
 		{
-			"file" : "C:/dev/3D_Platformer/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir.rule"
+			"file" : "C:/dev/Aim/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir.rule"
 		},
 		{
-			"file" : "C:/dev/3D_Platformer/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch.rule"
+			"file" : "C:/dev/Aim/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch.rule"
 		},
 		{
-			"file" : "C:/dev/3D_Platformer/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test.rule"
+			"file" : "C:/dev/Aim/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test.rule"
 		},
 		{
-			"file" : "C:/dev/3D_Platformer/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update.rule"
+			"file" : "C:/dev/Aim/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update.rule"
 		}
 	],
 	"target" : 

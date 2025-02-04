@@ -23,7 +23,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-3.31/Modules/Platform/Windows-Initialize.cmake"
   "C:/Program Files/CMake/share/cmake-3.31/Modules/Platform/Windows.cmake"
   "C:/Program Files/CMake/share/cmake-3.31/Modules/Platform/WindowsPaths.cmake"
-  "CMakeFiles/3.31.4/CMakeSystem.cmake"
+  "CMakeFiles/3.31.5/CMakeSystem.cmake"
   "CMakeLists.txt"
   "raylib-populate-prefix/tmp/raylib-populate-mkdirs.cmake"
   )
