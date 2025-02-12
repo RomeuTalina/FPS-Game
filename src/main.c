@@ -6,12 +6,19 @@
 #include "target.c"
 
 #define NUM_TARGETS 4
+#define MAIN_MENU 0
+#define IN_GAME 1
+#define SETTINGS 2
 
 double deltaTime;
 float drag;
 
 const int screenWidth = 1600;
 const int screenHeight = 900;
+
+int state = IN_GAME;
+
+int score = 0;
 
 float targetCoordinates[12][3] = {
     {0, 4, -3}, {0, 4, -1.5}, {0, 4, 1.5}, {0, 4, 3}, 
@@ -66,53 +73,60 @@ int main(){
 
     while(!WindowShouldClose()){
 
-        deltaTime = GetFrameTime();
+        switch(state){
+            case IN_GAME:
 
-        DrawFPS(20, 20);
+                deltaTime = GetFrameTime();
 
-        updatePlayer(&player);
+                DrawFPS(20, 20);
 
-        updatePlayerCamera(&player);
+                updatePlayer(&player);
 
-        Ray hitscanRay = (Ray) {player.camera.position, player.direction};
+                updatePlayerCamera(&player);
 
-        if(IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
-            for(int i = 0; i < NUM_TARGETS; i++){
-                RayCollision collision = GetRayCollisionSphere(hitscanRay, targets->targets[i].pos, targets->targets[i].radius);
-                if(collision.hit){
-                    changePosition(targets, &targets->targets[i], targetCoordinates); 
-                    break;
+                Ray hitscanRay = (Ray) {player.camera.position, player.direction};
+
+                if(IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
+                    for(int i = 0; i < NUM_TARGETS; i++){
+                        RayCollision collision = GetRayCollisionSphere(hitscanRay, targets->targets[i].pos, targets->targets[i].radius);
+                        if(collision.hit){
+                            changePosition(targets, &targets->targets[i], targetCoordinates); 
+                            score += 20;
+                            break;
+                        }
+                    }
+
                 }
-            }
-            
+
+                if(IsKeyPressed(KEY_F11)){
+                    ToggleFullscreen();
+                }
+
+                BeginDrawing();
+
+                ClearBackground(RAYWHITE);
+
+                BeginMode3D(player.camera);
+
+                DrawModel(floorModel, (Vector3){0, -0.1f, 0}, 1.0f, WHITE);
+
+                for(int i = 0; i < NUM_TARGETS; i++){
+                    draw(targets->targets[i]);
+                }
+
+                EndMode3D();
+
+                Vector2 crosshairCoords = (Vector2) {screenWidth/2.0f, screenHeight/2.0f};
+
+                DrawRectangle(crosshairCoords.x - 7, crosshairCoords.y - 1, 5, 2, RED);
+                DrawRectangle(crosshairCoords.x + 2, crosshairCoords.y - 1, 5, 2, RED);
+                DrawRectangle(crosshairCoords.x - 1, crosshairCoords.y - 7, 2, 5, RED);
+                DrawRectangle(crosshairCoords.x - 1, crosshairCoords.y + 2, 2, 5, RED);
+
+                DrawText(TextFormat("Score: %d", score), 20, 50, 16, BLACK);
+
+                EndDrawing();
         }
-
-        if(IsKeyPressed(KEY_F11)){
-            ToggleFullscreen();
-        }
-
-        BeginDrawing();
-
-        ClearBackground(RAYWHITE);
-
-        BeginMode3D(player.camera);
-
-        DrawModel(floorModel, (Vector3){0, -0.1f, 0}, 1.0f, WHITE);
-
-        for(int i = 0; i < NUM_TARGETS; i++){
-            draw(targets->targets[i]);
-        }
-
-        EndMode3D();
-
-        Vector2 crosshairCoords = (Vector2) {screenWidth/2.0f, screenHeight/2.0f};
-
-        DrawRectangle(crosshairCoords.x - 7, crosshairCoords.y - 1, 5, 2, RED);
-        DrawRectangle(crosshairCoords.x + 2, crosshairCoords.y - 1, 5, 2, RED);
-        DrawRectangle(crosshairCoords.x - 1, crosshairCoords.y - 7, 2, 5, RED);
-        DrawRectangle(crosshairCoords.x - 1, crosshairCoords.y + 2, 2, 5, RED);
-
-        EndDrawing();
     }
 
     UnloadTexture(floorTexture);
