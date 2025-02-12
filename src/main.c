@@ -1,7 +1,11 @@
 #include <raylib.h>
+#include <time.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "player.c"
 #include "target.c"
+
+#define NUM_TARGETS 4
 
 double deltaTime;
 float drag;
@@ -9,9 +13,21 @@ float drag;
 const int screenWidth = 1600;
 const int screenHeight = 900;
 
-const Target targets[4];  
+float targetCoordinates[12][3] = {
+    {0, 4, -3}, {0, 4, -1.5}, {0, 4, 1.5}, {0, 4, 3}, 
+    {0, 2.5, -3}, {0, 2.5, -1.5}, {0, 2.5, 1.5}, {0, 2.5, 3}, 
+    {0, 1, -3}, {0, 1, -1.5}, {0, 1, 1.5}, {0, 1, 3}
+};
 
 int main(){
+
+    TargetMap *targets = initMap(NUM_TARGETS);
+
+    srand(time(NULL));
+
+    for(int i = 0; i < NUM_TARGETS; i++){
+        generateTarget(targets, targetCoordinates);
+    }
 
     InitWindow(screenWidth, screenHeight, "Teste 3D");
 
@@ -48,8 +64,6 @@ int main(){
 
     floorModel.materials[0].maps[MATERIAL_MAP_DIFFUSE].texture = floorTexture;
 
-    Target target = (Target) {(Vector3) {0, 2.0f, 0}, 1.0f, RED};
-
     while(!WindowShouldClose()){
 
         deltaTime = GetFrameTime();
@@ -62,12 +76,19 @@ int main(){
 
         Ray hitscanRay = (Ray) {player.camera.position, player.direction};
 
-        RayCollision collision = GetRayCollisionSphere(hitscanRay, target.pos, target.radius);
-
         if(IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
-            if(collision.hit){
-                printf("Target Hit.\n");
+            for(int i = 0; i < NUM_TARGETS; i++){
+                RayCollision collision = GetRayCollisionSphere(hitscanRay, targets->targets[i].pos, targets->targets[i].radius);
+                if(collision.hit){
+                    changePosition(targets, &targets->targets[i], targetCoordinates); 
+                    break;
+                }
             }
+            
+        }
+
+        if(IsKeyPressed(KEY_F11)){
+            ToggleFullscreen();
         }
 
         BeginDrawing();
@@ -78,7 +99,9 @@ int main(){
 
         DrawModel(floorModel, (Vector3){0, -0.1f, 0}, 1.0f, WHITE);
 
-        draw(target);
+        for(int i = 0; i < NUM_TARGETS; i++){
+            draw(targets->targets[i]);
+        }
 
         EndMode3D();
 
