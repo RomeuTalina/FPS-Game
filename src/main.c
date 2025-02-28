@@ -2,8 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "player.c"
 #include "target.c"
+#include "cJSON.c"
+#include "settings.c"
 
 #define NUM_TARGETS 4
 
@@ -13,6 +16,8 @@ float drag;
 const int screenWidth = 1600;
 const int screenHeight = 900;
 
+UserSettings userSettings;  
+
 float targetCoordinates[12][3] = {
     {0, 4, -3}, {0, 4, -1.5}, {0, 4, 1.5}, {0, 4, 3}, 
     {0, 2.5, -3}, {0, 2.5, -1.5}, {0, 2.5, 1.5}, {0, 2.5, 3}, 
@@ -20,6 +25,13 @@ float targetCoordinates[12][3] = {
 };
 
 int main(){
+
+    loadSettings(&userSettings, "UserSettings.json");
+
+    printf("Sensitivity: %lf", userSettings.mouseSensitivity);
+
+    RLAPI const char *workDir = GetWorkingDirectory();
+    RLAPI const char *appDir = GetApplicationDirectory();
 
     TargetMap *targets = initMap(NUM_TARGETS);
 
@@ -29,9 +41,13 @@ int main(){
         generateTarget(targets, targetCoordinates);
     }
 
-    InitWindow(screenWidth, screenHeight, "Teste 3D");
+    InitWindow(screenWidth, screenHeight, "Aim Trainer");
 
-    Player player = initPlayer(&deltaTime);
+    if(userSettings.fullscreen){
+        ToggleFullscreen();
+    }
+
+    Player player = initPlayer(&deltaTime, userSettings.mouseSensitivity);
 
     DisableCursor();
 
@@ -54,7 +70,8 @@ int main(){
 
     //Must load each texture as an image first, then flip them before turning
     //them into textures, otherwise raylib will render them upside down.
-    Image floor = LoadImage("C:\\dev\\aim\\resources\\textures\\floor.png");
+    /*Image floor = LoadImage("/home/romeu/dev/aim/resources/textures/floor.png");*/
+    Image floor = LoadImage("./resources/textures/floor.png");
 
     ImageFlipVertical(&floor);
 

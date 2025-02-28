@@ -1,0 +1,21 @@
+# ninja log v5
+0	46	1740396347910944980	cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-mkdir	9635edc47d5914e2
+0	46	1740396347910944980	/home/romeu/dev/aim/build/_deps/cjson-subbuild/cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-mkdir	9635edc47d5914e2
+0	1311	1740396577313048147	cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-download	497ac89fa657ec9b
+0	1311	1740396577313048147	/home/romeu/dev/aim/build/_deps/cjson-subbuild/cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-download	497ac89fa657ec9b
+1311	1322	0	cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-update	761df49fd383345e
+1311	1322	0	/home/romeu/dev/aim/build/_deps/cjson-subbuild/cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-update	761df49fd383345e
+1322	1334	1740396577336048203	cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-patch	bba2cfe4724052e4
+1322	1334	1740396577336048203	/home/romeu/dev/aim/build/_deps/cjson-subbuild/cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-patch	bba2cfe4724052e4
+1334	1346	1740396577348048233	cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-configure	ec0fc6fa33a9bfce
+1334	1346	1740396577348048233	/home/romeu/dev/aim/build/_deps/cjson-subbuild/cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-configure	ec0fc6fa33a9bfce
+1346	1357	1740396577359048260	cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-build	cb9ff647d09d1883
+1346	1357	1740396577359048260	/home/romeu/dev/aim/build/_deps/cjson-subbuild/cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-build	cb9ff647d09d1883
+1357	1369	1740396577371048290	cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-install	e88157b2412fb236
+1357	1369	1740396577371048290	/home/romeu/dev/aim/build/_deps/cjson-subbuild/cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-install	e88157b2412fb236
+1369	1381	1740396577383048320	cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-test	50f8b17d7bab3d6c
+1369	1381	1740396577383048320	/home/romeu/dev/aim/build/_deps/cjson-subbuild/cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-test	50f8b17d7bab3d6c
+1381	1398	1740396577400048362	CMakeFiles/cjson-populate-complete	61c08318a32c6dd4
+1381	1398	1740396577400048362	cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-done	61c08318a32c6dd4
+1381	1398	1740396577400048362	/home/romeu/dev/aim/build/_deps/cjson-subbuild/CMakeFiles/cjson-populate-complete	61c08318a32c6dd4
+1381	1398	1740396577400048362	/home/romeu/dev/aim/build/_deps/cjson-subbuild/cjson-populate-prefix/src/cjson-populate-stamp/cjson-populate-done	61c08318a32c6dd4

@@ -16,7 +16,9 @@ typedef struct{
     bool isGrounded;
 }Player;
 
-Player initPlayer(double *dt){
+double mouseSensitivity;
+
+Player initPlayer(double *dt, double sens){
     Player player;
     Camera3D camera;
     float mass = 65;
@@ -32,6 +34,7 @@ Player initPlayer(double *dt){
     camera.projection = CAMERA_PERSPECTIVE;
     player = (Player) {camera, mass, speed, rotation, pos, vel};
     ptrDT = dt;
+    mouseSensitivity = sens;
     return player;
 }
 
@@ -106,8 +109,6 @@ void updatePlayer(Player *player){
 void updatePlayerCamera(Player *player){
     
     Vector2 mouseDelta = GetMouseDelta();
-
-    const float mouseSensitivity = 0.05f;
 
     player->rotation.x += mouseDelta.x * mouseSensitivity;
     player->rotation.y -= mouseDelta.y * mouseSensitivity;
