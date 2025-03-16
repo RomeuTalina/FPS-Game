@@ -9,14 +9,13 @@ typedef struct{
     Camera3D camera;
     float mass;
     float speed;
+    double mouseSensitivity;
     Vector2 rotation;
     Vector3 pos;
     Vector3 vel;
     Vector3 direction;
     bool isGrounded;
 }Player;
-
-double mouseSensitivity;
 
 Player initPlayer(double *dt, double sens){
     Player player;
@@ -32,9 +31,8 @@ Player initPlayer(double *dt, double sens){
     camera.position = (Vector3) {pos.x, pos.y + 1.7f, pos.z};
     camera.up = (Vector3) {0, 1, 0}; 
     camera.projection = CAMERA_PERSPECTIVE;
-    player = (Player) {camera, mass, speed, rotation, pos, vel};
+    player = (Player) {camera, mass, speed, sens, rotation, pos, vel};
     ptrDT = dt;
-    mouseSensitivity = sens;
     return player;
 }
 
@@ -110,8 +108,8 @@ void updatePlayerCamera(Player *player){
     
     Vector2 mouseDelta = GetMouseDelta();
 
-    player->rotation.x += mouseDelta.x * mouseSensitivity;
-    player->rotation.y -= mouseDelta.y * mouseSensitivity;
+    player->rotation.x += mouseDelta.x * player->mouseSensitivity;
+    player->rotation.y -= mouseDelta.y * player->mouseSensitivity;
 
     float yaw = player->rotation.x;
     float pitch = player->rotation.y;

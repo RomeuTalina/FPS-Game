@@ -35,11 +35,12 @@ int loadSettings(UserSettings *settings, char *userSettings){
     FILE *settingsPtr = fopen(userSettings, "r");
     if(settingsPtr == NULL){
         resetSettings();
-        loadSettings(settings, userSettings);
+        return loadSettings(settings, userSettings);
     }
 
     char buffer[1024];
     int len = fread(buffer, 1, sizeof(buffer), settingsPtr);
+    buffer[len] = '\0';
     fclose(settingsPtr);
 
     cJSON *json = cJSON_Parse(buffer);
@@ -53,8 +54,10 @@ int loadSettings(UserSettings *settings, char *userSettings){
     }
 
     cJSON *sens = cJSON_GetObjectItemCaseSensitive(json, "sensitivity");
+    printf("SENSITIVITY READ FROM THE USERSETTINGS FILE: %lf\n", sens->valuedouble);
     if(cJSON_IsNumber(sens) && (sens->valuedouble > 0)){
         settings->mouseSensitivity = sens->valuedouble;
+        printf("SENSITIVITY AFTER READING BUT NOT IN MAIN: %lf\n",settings->mouseSensitivity);
     }
     else{
         settings->mouseSensitivity = 1.0f;
@@ -80,6 +83,8 @@ int loadSettings(UserSettings *settings, char *userSettings){
     else{
         settings->audioVolume = 0;
     }
+
+    cJSON_Delete(json);
      
     return 0;
 }

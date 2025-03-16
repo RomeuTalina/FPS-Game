@@ -1,22 +1,24 @@
 #include <raylib.h>
+/*#include "raygui.h"*/
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "player.c"
-#include "target.c"
-#include "cJSON.c"
-#include "settings.c"
+#include "player.h"
+#include "target.h"
+#include "settings.h"
 
 #define NUM_TARGETS 4
 
-double deltaTime;
-float drag;
+double deltaTime; 
+float drag; 
 
-const int screenWidth = 1600;
-const int screenHeight = 900;
+const int screenWidth = 1920;
+const int screenHeight = 1080;
 
 UserSettings userSettings;  
+
+bool menuOpen = false;
 
 float targetCoordinates[12][3] = {
     {0, 4, -3}, {0, 4, -1.5}, {0, 4, 1.5}, {0, 4, 3}, 
@@ -26,9 +28,9 @@ float targetCoordinates[12][3] = {
 
 int main(){
 
-    loadSettings(&userSettings, "UserSettings.json");
+    printf("LoadSettings Result: %d\n", loadSettings(&userSettings, "UserSettings.json"));
 
-    printf("Sensitivity: %lf", userSettings.mouseSensitivity);
+    printf("Sensitivity InGame: %lf\n", userSettings.mouseSensitivity);
 
     RLAPI const char *workDir = GetWorkingDirectory();
     RLAPI const char *appDir = GetApplicationDirectory();
@@ -42,6 +44,7 @@ int main(){
     }
 
     InitWindow(screenWidth, screenHeight, "Aim Trainer");
+    SetExitKey(KEY_NULL);
 
     if(userSettings.fullscreen){
         ToggleFullscreen();
@@ -89,7 +92,9 @@ int main(){
 
         updatePlayer(&player);
 
-        updatePlayerCamera(&player);
+        if(!menuOpen){
+            updatePlayerCamera(&player);
+        }
 
         Ray hitscanRay = (Ray) {player.camera.position, player.direction};
 
@@ -108,6 +113,16 @@ int main(){
             ToggleFullscreen();
         }
 
+        if(IsKeyPressed(KEY_ESCAPE)){
+            menuOpen = !menuOpen;  
+            if(menuOpen){
+                EnableCursor();
+            }
+            else{
+                DisableCursor();
+            }
+        }
+
         BeginDrawing();
 
         ClearBackground(RAYWHITE);
@@ -123,11 +138,21 @@ int main(){
         EndMode3D();
 
         Vector2 crosshairCoords = (Vector2) {screenWidth/2.0f, screenHeight/2.0f};
-
-        DrawRectangle(crosshairCoords.x - 7, crosshairCoords.y - 1, 5, 2, RED);
-        DrawRectangle(crosshairCoords.x + 2, crosshairCoords.y - 1, 5, 2, RED);
-        DrawRectangle(crosshairCoords.x - 1, crosshairCoords.y - 7, 2, 5, RED);
-        DrawRectangle(crosshairCoords.x - 1, crosshairCoords.y + 2, 2, 5, RED);
+            DrawRectangle(crosshairCoords.x - 7, crosshairCoords.y - 1, 5, 2, RED);    
+            DrawRectangle(crosshairCoords.x + 2, crosshairCoords.y - 1, 5, 2, RED); 
+            DrawRectangle(crosshairCoords.x - 1, crosshairCoords.y - 7, 2, 5, RED); 
+            DrawRectangle(crosshairCoords.x - 1, crosshairCoords.y + 2, 2, 5, RED); 
+            if(menuOpen) { 
+                DrawRectangle(screenWidth*0.1, screenHeight*0.1, screenWidth-(screenWidth*0.2), screenHeight-(screenHeight*0.2), (Color) {0, 0, 70, 255}); 
+                DrawText("SETTINGS", (screenWidth/2)-190, screenHeight*0.15, 70, WHITE); 
+                DrawText("Mouse Sensitivity", (screenWidth/2.0)-600, screenHeight * 0.3, 40, WHITE);
+                /*GuiSlider( (Rectangle) {*/
+                /*        (screenWidth/2.0)-(screenWidth*0.35), screenHeight * 0.3,*/
+                /*        (screenWidth/2.0)+(screenWidth*0.35), screenHeight * 0.45*/
+                /*        }, TextFormat("%f", userSettings.mouseSensitivity), "", &userSettings.mouseSensitivity, 0.01f, 2);*/
+                DrawText("Audio Volume", (screenWidth/2.0)-600, screenHeight * 0.5, 40, WHITE);
+                DrawText("Fullscreen", (screenWidth/2.0)-600, screenHeight * 0.7, 40, WHITE);
+            }
 
         EndDrawing();
     }

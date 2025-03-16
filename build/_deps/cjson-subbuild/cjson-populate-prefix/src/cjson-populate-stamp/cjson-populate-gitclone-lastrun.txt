@@ -1,3 +1,0 @@
-repository='https://github.com/DaveGamble/cJSON.git'
-module=''
-tag='origin'

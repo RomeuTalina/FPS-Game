@@ -1,8 +1,33 @@
 [
 {
   "directory": "/home/romeu/dev/aim/build",
-  "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include -std=gnu11 -o CMakeFiles/Aim.dir/src/main.c.o -c /home/romeu/dev/aim/src/main.c",
+  "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/romeu/dev/aim/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include -std=gnu11 -o CMakeFiles/Game.dir/src/main.c.o -c /home/romeu/dev/aim/src/main.c",
   "file": "/home/romeu/dev/aim/src/main.c"
+},
+{
+  "directory": "/home/romeu/dev/aim/build",
+  "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/romeu/dev/aim/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include -std=gnu11 -o CMakeFiles/Game.dir/src/raygui_impl.c.o -c /home/romeu/dev/aim/src/raygui_impl.c",
+  "file": "/home/romeu/dev/aim/src/raygui_impl.c"
+},
+{
+  "directory": "/home/romeu/dev/aim/build",
+  "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/romeu/dev/aim/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include -std=gnu11 -o CMakeFiles/Game.dir/src/player.c.o -c /home/romeu/dev/aim/src/player.c",
+  "file": "/home/romeu/dev/aim/src/player.c"
+},
+{
+  "directory": "/home/romeu/dev/aim/build",
+  "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/romeu/dev/aim/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include -std=gnu11 -o CMakeFiles/Game.dir/src/target.c.o -c /home/romeu/dev/aim/src/target.c",
+  "file": "/home/romeu/dev/aim/src/target.c"
+},
+{
+  "directory": "/home/romeu/dev/aim/build",
+  "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/romeu/dev/aim/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include -std=gnu11 -o CMakeFiles/Game.dir/src/cJSON.c.o -c /home/romeu/dev/aim/src/cJSON.c",
+  "file": "/home/romeu/dev/aim/src/cJSON.c"
+},
+{
+  "directory": "/home/romeu/dev/aim/build",
+  "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/romeu/dev/aim/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include -std=gnu11 -o CMakeFiles/Game.dir/src/settings.c.o -c /home/romeu/dev/aim/src/settings.c",
+  "file": "/home/romeu/dev/aim/src/settings.c"
 },
 {
   "directory": "/home/romeu/dev/aim/build",

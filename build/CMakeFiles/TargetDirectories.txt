@@ -1,4 +1,4 @@
-/home/romeu/dev/aim/build/CMakeFiles/Aim.dir
+/home/romeu/dev/aim/build/CMakeFiles/Game.dir
 /home/romeu/dev/aim/build/CMakeFiles/package.dir
 /home/romeu/dev/aim/build/CMakeFiles/package_source.dir
 /home/romeu/dev/aim/build/CMakeFiles/edit_cache.dir

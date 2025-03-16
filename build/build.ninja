@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Aim
+# Project: Game
 # Configurations: 
 # =============================================================================
 
@@ -36,37 +36,77 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/romeu/dev/aim/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target Aim
+# Object build statements for EXECUTABLE target Game
 
 
 #############################################
-# Order-only phony target for Aim
+# Order-only phony target for Game
 
-build cmake_object_order_depends_target_Aim: phony || cmake_object_order_depends_target_glfw cmake_object_order_depends_target_raylib
+build cmake_object_order_depends_target_Game: phony || cmake_object_order_depends_target_glfw cmake_object_order_depends_target_raylib
 
-build CMakeFiles/Aim.dir/src/main.c.o: C_COMPILER__Aim_ /home/romeu/dev/aim/src/main.c || cmake_object_order_depends_target_Aim
+build CMakeFiles/Game.dir/src/main.c.o: C_COMPILER__Game_ /home/romeu/dev/aim/src/main.c || cmake_object_order_depends_target_Game
   DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/Aim.dir/src/main.c.o.d
+  DEP_FILE = CMakeFiles/Game.dir/src/main.c.o.d
   FLAGS = -std=gnu11
-  INCLUDES = -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/Aim.dir
-  OBJECT_FILE_DIR = CMakeFiles/Aim.dir/src
+  INCLUDES = -I/home/romeu/dev/aim/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include
+  OBJECT_DIR = CMakeFiles/Game.dir
+  OBJECT_FILE_DIR = CMakeFiles/Game.dir/src
+
+build CMakeFiles/Game.dir/src/raygui_impl.c.o: C_COMPILER__Game_ /home/romeu/dev/aim/src/raygui_impl.c || cmake_object_order_depends_target_Game
+  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
+  DEP_FILE = CMakeFiles/Game.dir/src/raygui_impl.c.o.d
+  FLAGS = -std=gnu11
+  INCLUDES = -I/home/romeu/dev/aim/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include
+  OBJECT_DIR = CMakeFiles/Game.dir
+  OBJECT_FILE_DIR = CMakeFiles/Game.dir/src
+
+build CMakeFiles/Game.dir/src/player.c.o: C_COMPILER__Game_ /home/romeu/dev/aim/src/player.c || cmake_object_order_depends_target_Game
+  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
+  DEP_FILE = CMakeFiles/Game.dir/src/player.c.o.d
+  FLAGS = -std=gnu11
+  INCLUDES = -I/home/romeu/dev/aim/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include
+  OBJECT_DIR = CMakeFiles/Game.dir
+  OBJECT_FILE_DIR = CMakeFiles/Game.dir/src
+
+build CMakeFiles/Game.dir/src/target.c.o: C_COMPILER__Game_ /home/romeu/dev/aim/src/target.c || cmake_object_order_depends_target_Game
+  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
+  DEP_FILE = CMakeFiles/Game.dir/src/target.c.o.d
+  FLAGS = -std=gnu11
+  INCLUDES = -I/home/romeu/dev/aim/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include
+  OBJECT_DIR = CMakeFiles/Game.dir
+  OBJECT_FILE_DIR = CMakeFiles/Game.dir/src
+
+build CMakeFiles/Game.dir/src/cJSON.c.o: C_COMPILER__Game_ /home/romeu/dev/aim/src/cJSON.c || cmake_object_order_depends_target_Game
+  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
+  DEP_FILE = CMakeFiles/Game.dir/src/cJSON.c.o.d
+  FLAGS = -std=gnu11
+  INCLUDES = -I/home/romeu/dev/aim/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include
+  OBJECT_DIR = CMakeFiles/Game.dir
+  OBJECT_FILE_DIR = CMakeFiles/Game.dir/src
+
+build CMakeFiles/Game.dir/src/settings.c.o: C_COMPILER__Game_ /home/romeu/dev/aim/src/settings.c || cmake_object_order_depends_target_Game
+  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
+  DEP_FILE = CMakeFiles/Game.dir/src/settings.c.o.d
+  FLAGS = -std=gnu11
+  INCLUDES = -I/home/romeu/dev/aim/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src -I/home/romeu/dev/aim/build/_deps/raylib-src/src/external/glfw/include
+  OBJECT_DIR = CMakeFiles/Game.dir
+  OBJECT_FILE_DIR = CMakeFiles/Game.dir/src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Aim
+# Link build statements for EXECUTABLE target Game
 
 
 #############################################
-# Link the executable Aim
+# Link the executable Game
 
-build Aim: C_EXECUTABLE_LINKER__Aim_ CMakeFiles/Aim.dir/src/main.c.o | _deps/raylib-build/raylib/libraylib.a /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so _deps/raylib-build/raylib/external/glfw/src/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so || _deps/raylib-build/raylib/external/glfw/src/libglfw3.a _deps/raylib-build/raylib/libraylib.a
+build Game: C_EXECUTABLE_LINKER__Game_ CMakeFiles/Game.dir/src/main.c.o CMakeFiles/Game.dir/src/raygui_impl.c.o CMakeFiles/Game.dir/src/player.c.o CMakeFiles/Game.dir/src/target.c.o CMakeFiles/Game.dir/src/cJSON.c.o CMakeFiles/Game.dir/src/settings.c.o | _deps/raylib-build/raylib/libraylib.a /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so _deps/raylib-build/raylib/external/glfw/src/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so || _deps/raylib-build/raylib/external/glfw/src/libglfw3.a _deps/raylib-build/raylib/libraylib.a
   LINK_LIBRARIES = _deps/raylib-build/raylib/libraylib.a  -lm  -lpthread  -ldl  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libGLX.so  _deps/raylib-build/raylib/external/glfw/src/libglfw3.a  /usr/lib/x86_64-linux-gnu/librt.a  -lm  -ldl
-  OBJECT_DIR = CMakeFiles/Aim.dir
+  OBJECT_DIR = CMakeFiles/Game.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = Aim
-  TARGET_PDB = Aim.dbg
+  TARGET_FILE = Game
+  TARGET_PDB = Game.dbg
 
 
 #############################################
@@ -873,7 +913,7 @@ build update_mappings: phony _deps/raylib-build/raylib/external/glfw/src/update_
 #############################################
 # Folder: /home/romeu/dev/aim/build
 
-build all: phony Aim _deps/raylib-build/all
+build all: phony Game _deps/raylib-build/all
 
 # =============================================================================
 
